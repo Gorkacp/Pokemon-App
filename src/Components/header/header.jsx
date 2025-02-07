@@ -61,7 +61,7 @@ export function Header() {
               </Link> 
 
               {estaIniciado && (
-                <Link className="nav-link" to="/juego" onClick={toggleMenu}>
+                <Link className="nav-link" to="/jugar" onClick={toggleMenu}>
                   <li className="nav-item">
                     <span className="nav-link-text">Juegos</span>
                   </li>
