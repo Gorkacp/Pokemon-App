@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+/* Estilos generales del Navbar */
+.custom-navbar {
+    font-family: 'Poppins', sans-serif;
+    background-color: black;
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 6px rgba(94, 16, 16, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* Contenedor del Navbar */
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Logo */
+.imgLogo {
+    width: 50px;
+    height: auto;
+}
+
+/* Botón de hamburguesa */
+.navbar-toggler {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.navbar-toggler-icon {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    display: block;
+    position: relative;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    left: 0;
+}
+
+.navbar-toggler-icon::before {
+    top: -10px;
+}
+
+.navbar-toggler-icon::after {
+    bottom: -10px;
+}
+
+/* Lista de navegación */
+.nav-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    margin-left: -20px; /* Mueve los botones más a la izquierda */
+}
+
+/* Elementos del Navbar */
+.nav-item {
+    margin: 0 15px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.nav-item:hover {
+    transform: scale(1.1);
+}
+
+/* Enlaces de navegación */
+.nav-link {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s;
+    font-family: 'Poppins', sans-serif;
+}
+
+.nav-link:hover {
+    color: #ffcc00;
+}
+
+/* Enlace de Cerrar Sesión */
+.nav-link-logout {
+    color: red;
+    font-family: 'Poppins', sans-serif;
+}
+
+.nav-link-logout:hover {
+    color: darkred;
+}
+
+/* Estilos del usuario */
+.usuario-nombre {
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffcc00;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Contenedor del usuario y cerrar sesión */
+.user-container {
+    display: flex;
+    align-items: center;
+}
+
+/* Estilos Responsive */
+@media (max-width: 768px) {
+    .navbar-toggler {
+        display: block;
+    }
+
+    .navbar-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: rgba(0, 0, 0, 0.9);
+        width: 100%;
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+
+    .nav-list {
+        flex-direction: column;
+    }
+
+    .nav-item {
+        margin: 15px 0;
+    }
+}

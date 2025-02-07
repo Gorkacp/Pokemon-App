@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+.login-container {
+  margin-top: 100px; /* Ajusta este valor según sea necesario */
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Poppins', sans-serif;
+}
+
+.login-container h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.login-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-container label {
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.login-container input {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.login-container button {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+.login-container button:hover {
+  background-color: #0056b3;
+}
+
+.login-container .google-login {
+  background-color: #db4437;
+}
+
+.login-container .google-login:hover {
+  background-color: #c23321;
+}
+
+.login-container p {
+  color: red;
+  text-align: center;
+  margin-top: 10px;
+}

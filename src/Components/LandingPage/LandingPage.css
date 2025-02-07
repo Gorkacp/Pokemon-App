@@ -1,0 +1,66 @@
+.landing-page {
+    font-family: 'Poppins', sans-serif;
+    background: url('/imagenes/image.png') no-repeat center center;
+    background-size: cover;
+    padding: 20px;
+    min-height: calc(100vh - 100px); /* Ajusta este valor según la altura del header y footer */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .landing-page-title {
+    color: #000000;
+    text-align: center;
+    margin-top: 180px;
+    font-size: 2.5em;
+    font-weight: bold;
+  }
+  
+  .landing-page-description {
+    color: #000000;
+    text-align: center;
+    font-size: 1.2em;
+    margin: 20px 0;
+  }
+  
+  .landing-page-nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .landing-page-link {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #000000;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 1.1em;
+    font-weight: bold;
+  }
+  
+  .landing-page-link:hover {
+    background-color: #4a90e2;
+    color: #ffffff;
+  }
+  
+  /* Estilos responsivos */
+  @media (max-width: 768px) {
+    .landing-page-title {
+      font-size: 2em;
+    }
+  
+    .landing-page-description {
+      font-size: 1em;
+    }
+  
+    .landing-page-link {
+      font-size: 1em;
+      padding: 8px 16px;
+    }
+  }

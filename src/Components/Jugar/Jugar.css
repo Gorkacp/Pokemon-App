@@ -1,0 +1,54 @@
+.jugar-container {
+    font-family: 'Poppins', sans-serif;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .jugar-container .pokemon-image {
+    width: 200px;
+    height: 200px;
+    filter: blur(5px); /* Imagen menos borrosa */
+    margin-bottom: 20px;
+    transition: filter 0.3s ease;
+  }
+  
+  .jugar-container.correct .pokemon-image {
+    filter: blur(0); /* Quitar el efecto borroso cuando es correcto */
+  }
+  
+  .jugar-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .jugar-container input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 80%;
+  }
+  
+  .jugar-container button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .jugar-container button:hover {
+    background-color: #0056b3;
+  }
+  
+  .jugar-container p {
+    font-size: 1.2em;
+    color: #333;
+  }
