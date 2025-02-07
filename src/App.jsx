@@ -5,9 +5,9 @@ import Jugar from './Components/Jugar/Jugar.jsx';
 import Error404 from './Components/Error/Error.jsx';
 import { Detalle } from './Components/Detalle/Detalle.jsx';
 import LandingPage from './Components/LandingPage/LandingPage.jsx';
-import Login from './Components/Login/Login.jsx';
+import Login from './Components/Login/login.jsx';
 import Pokemon from './Components/Pokemon/Pokemon.jsx';
-import Ranking from './Components/Ranking/Ranking.jsx';
+import Ranking from './Components/ranking/ranking.jsx';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
