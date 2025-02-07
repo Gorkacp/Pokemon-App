@@ -1,4 +1,4 @@
-import './Header.css';
+import './header.css';
 import { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Jugar from '../Jugar/Jugar.jsx'; 
