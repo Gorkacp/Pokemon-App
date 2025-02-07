@@ -1,4 +1,5 @@
-import { Header } from './Components/Header/Header.jsx';
+
+import { Header } from './Components/header/header.jsx';
 import Footer from './Components/Footer/Footer.jsx';
 import Jugar from './Components/Jugar/Jugar.jsx';
 import Error404 from './Components/Error/Error.jsx';
