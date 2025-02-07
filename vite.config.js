@@ -3,6 +3,6 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: './', // Cambia esto para evitar errores con rutas en GitHub Pages
+  base: '/Pokemon-App/', 
 })
 
