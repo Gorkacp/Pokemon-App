@@ -45,14 +45,19 @@
   }
   
   .landing-page-link:hover {
-    background-color: #4a90e2;
+    background-color: #ffcc00;
     color: #ffffff;
   }
   
   /* Estilos responsivos */
   @media (max-width: 768px) {
+    .landing-page {
+      padding: 15px;
+    }
+  
     .landing-page-title {
       font-size: 2em;
+      margin-top: 150px;
     }
   
     .landing-page-description {
@@ -62,5 +67,25 @@
     .landing-page-link {
       font-size: 1em;
       padding: 8px 16px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .landing-page {
+      padding: 10px;
+    }
+  
+    .landing-page-title {
+      font-size: 1.5em;
+      margin-top: 120px;
+    }
+  
+    .landing-page-description {
+      font-size: 0.9em;
+    }
+  
+    .landing-page-link {
+      font-size: 0.9em;
+      padding: 6px 12px;
     }
   }

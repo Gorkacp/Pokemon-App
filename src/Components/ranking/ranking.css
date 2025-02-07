@@ -17,3 +17,24 @@
     font-size: 1.2em;
     color: #333;
   }
+  
+  /* Estilos responsivos */
+  @media (max-width: 768px) {
+    .ranking-container {
+      padding: 15px;
+    }
+  
+    .top-user p {
+      font-size: 1em;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .ranking-container {
+      padding: 10px;
+    }
+  
+    .top-user p {
+      font-size: 0.9em;
+    }
+  }

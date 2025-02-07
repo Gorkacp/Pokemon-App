@@ -9,6 +9,7 @@ import { onAuthStateChanged, signOut } from 'firebase/auth';
 export function Header() {
   const [estaIniciado, setEstaIniciado] = useState(false);
   const [nombreUsuario, setNombreUsuario] = useState('');
+  const [menuAbierto, setMenuAbierto] = useState(false);
 
   useEffect(() => {
     // Escuchamos el cambio en el estado de autenticación
@@ -35,28 +36,32 @@ export function Header() {
     }
   };
 
+  const toggleMenu = () => {
+    setMenuAbierto(!menuAbierto);
+  };
+
   return (
     <>
       <nav className="custom-navbar">
-        <div className="navbar-container"> 
-          <button className="navbar-toggler" type="button">
+        <div className="navbar-container">  
+          <button className="navbar-toggler" type="button" onClick={toggleMenu}>
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div className="navbar-links">
+          <div className={`navbar-links ${menuAbierto ? 'active' : ''}`}>
             <ul className="nav-list">
-              <Link className="nav-link" to="/">
+              <Link className="nav-link" to="/" onClick={toggleMenu}>
                 <li className="nav-item">
                   <span className="nav-link-text">Inicio</span>
                 </li>
               </Link>
-              <Link className="nav-link" to="/pokemon">
+              <Link className="nav-link" to="/pokemon" onClick={toggleMenu}>
                 <li className="nav-item">
                   <span className="nav-link-text">Pokémons</span>
                 </li>
               </Link> 
 
               {estaIniciado && (
-                <Link className="nav-link" to="/juego">
+                <Link className="nav-link" to="/juego" onClick={toggleMenu}>
                   <li className="nav-item">
                     <span className="nav-link-text">Juegos</span>
                   </li>
@@ -64,7 +69,7 @@ export function Header() {
               )}
 
               {estaIniciado && (
-                <Link className="nav-link" to="/ranking">
+                <Link className="nav-link" to="/ranking" onClick={toggleMenu}>
                   <li className="nav-item">
                     <span className="nav-link-text">Ranking</span>
                   </li>
@@ -72,25 +77,21 @@ export function Header() {
               )}
 
               {!estaIniciado && (
-                <Link className="nav-link" to="/login">
+                <Link className="nav-link" to="/login" onClick={toggleMenu}>
                   <li className="nav-item">
                     <span className="nav-link-text">Iniciar Sesión</span>
                   </li>
                 </Link>
               )}
-
-              {estaIniciado && (
-                <li className="nav-item nav-link-logout" onClick={cerrarSesion}>
+            </ul>
+            {estaIniciado && (
+              <div className="user-container">
+                <span className="usuario-nombre">{nombreUsuario}</span>
+                <li className="nav-item nav-link-logout" onClick={() => { cerrarSesion(); toggleMenu(); }}>
                   <span className="nav-link-text">Cerrar Sesión</span>
                 </li>
-              )}
-
-              {estaIniciado && (
-                <li className="nav-item">
-                  <span className="usuario-nombre">{nombreUsuario}</span>
-                </li>
-              )}
-            </ul>
+              </div>
+            )}
           </div>
         </div>
       </nav>

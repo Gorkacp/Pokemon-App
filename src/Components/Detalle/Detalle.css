@@ -35,3 +35,50 @@
   text-align: center;
   margin-top: 50px;
 }
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .detalle-container {
+    padding: 15px;
+  }
+
+  .pokemon-name {
+    font-size: 2em;
+  }
+
+  .pokemon-image {
+    width: 250px;
+    height: 250px;
+  }
+
+  .pokemon-detail {
+    font-size: 1em;
+  }
+
+  .loading {
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 480px) {
+  .detalle-container {
+    padding: 10px;
+  }
+
+  .pokemon-name {
+    font-size: 1.5em;
+  }
+
+  .pokemon-image {
+    width: 200px;
+    height: 200px;
+  }
+
+  .pokemon-detail {
+    font-size: 0.9em;
+  }
+
+  .loading {
+    font-size: 1em;
+  }
+}

@@ -59,3 +59,48 @@
 .view-more-button:hover {
   background-color: #ffcc00;
 }
+
+/* Estilos responsivos */
+@media (max-width: 1024px) {
+  .pokemon-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .pokemon-container {
+    padding: 15px;
+  }
+
+  .pokemon-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pokemon-item img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .pokemon-item p {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 480px) {
+  .pokemon-container {
+    padding: 10px;
+  }
+
+  .pokemon-list {
+    grid-template-columns: 1fr;
+  }
+
+  .pokemon-item img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .pokemon-item p {
+    font-size: 0.9em;
+  }
+}

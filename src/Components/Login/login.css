@@ -38,7 +38,7 @@
 
 .login-container button {
   padding: 10px;
-  background-color: #007bff;
+  background-color: #000000;
   color: white;
   border: none;
   border-radius: 4px;
@@ -49,19 +49,60 @@
 }
 
 .login-container button:hover {
-  background-color: #0056b3;
+  background-color: #000000;
 }
 
 .login-container .google-login {
-  background-color: #db4437;
+  background-color: #0a018a;
+  display: block;
+  margin: 0 auto; /* Centra el botón */
 }
 
 .login-container .google-login:hover {
-  background-color: #c23321;
+  background-color: #030186;
 }
 
 .login-container p {
   color: red;
   text-align: center;
   margin-top: 10px;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .login-container {
+    padding: 20px;
+    margin-top: 80px;
+  }
+
+  .login-container h1 {
+    font-size: 1.8em;
+  }
+
+  .login-container input {
+    padding: 8px;
+  }
+
+  .login-container button {
+    padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-container {
+    padding: 15px;
+    margin-top: 60px;
+  }
+
+  .login-container h1 {
+    font-size: 1.5em;
+  }
+
+  .login-container input {
+    padding: 6px;
+  }
+
+  .login-container button {
+    padding: 6px;
+  }
 }
