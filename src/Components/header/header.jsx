@@ -7,8 +7,11 @@ import { auth } from '../../config.js';
 import { onAuthStateChanged, signOut } from 'firebase/auth';
 
 export function Header() {
+  // Estado para verificar si el usuario está autenticado
   const [estaIniciado, setEstaIniciado] = useState(false);
+  // Estado para almacenar el nombre del usuario
   const [nombreUsuario, setNombreUsuario] = useState('');
+  // Estado para manejar el menú desplegable
   const [menuAbierto, setMenuAbierto] = useState(false);
 
   useEffect(() => {
@@ -23,19 +26,25 @@ export function Header() {
       }
     });
 
+    // Limpiamos el listener cuando el componente se desmonta
     return () => comprobarInicioSesion(); 
   }, []);
 
-  const cerrarSesion = async () => {
-    try {
-      await signOut(auth); 
-      console.log("Sesión cerrada");
-    } 
-    catch (error) {
-      console.error("Error al cerrar sesión:", error);
-    }
-  };
+  // Función para cerrar sesión
+const cerrarSesion = async () => {
+  try {
+    // 'await' se utiliza para esperar a que la promesa devuelta por 'signOut(auth)' se resuelva.
+    // Esto significa que el código se detendrá aquí hasta que 'signOut(auth)' haya terminado.
+    await signOut(auth); 
+    console.log("Sesión cerrada");
+  } 
+  catch (error) {
+    // Si ocurre un error durante la ejecución de 'signOut(auth)', se capturará aquí.
+    console.error("Error al cerrar sesión:", error);
+  }
+};
 
+  // Función para alternar el estado del menú desplegable
   const toggleMenu = () => {
     setMenuAbierto(!menuAbierto);
   };
